@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adore-All your  favourite  is Here</title>
+    <script src="https://kit.fontawesome.com/faa0509cbe.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="main2 border0">
+            <div class="header border1">
+                <div class="headerfirstline" >
+                    <a href="#"><img src="./images/adobe.jpg" alt="adoreimg" class="adoreimg"></a>
+                </div>
+                <div class="headermenu" id="stikymenu">
+                    <div id="menu_bar"><i class="fas fa-bars"></i></div>
+                    <img src="./logo/LOOgo2.png" alt="mainlogo" class="mainlogo">
+                    <h2>Adore</h2>
+                    <div class="menu" id="menu22">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li class="megamenu"><a href="#">More</a>
+                            <ul class="megamenu2">
+                                <li><a href="#">Music</a></li>
+                                <li><a href="#">Artist</a></li>
+                                <li><a href="#">Producar</a></li>
+                            </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search search_input">
+                        <input type="search" id="myInput" class="input" onkeyup="showResult(this.value)" placeholder="search lyrics and song..."> <i class="fas search-icon fa-search icon"></i>
+                        <div class="autocom-box">
+                            <!-- here list are inserted from javascript -->
+                          </div>
+                    </div>
+                    <div class="account">
+                        <ul>
+                            <li><a href="#">sing in</a></li>
+                            <li><a class="li1" href="./singup.html" target="_blank">Login for free</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="selector" id="padding">
+            <form action="/action_page.php">
+                <label for="categries" id="choose">Choose your best category</label>
+                <select name="categries" id="categries">
+                  <option class="font" value="select" onclick="select()">select</option>
+                  <option class="font" value="temp" onclick="best70s()">best of 70's</option>
+                  <option class="font" value="area" onclick="best90s()">best of 90's</option>
+                  <option class="font" value="distance" onclick="bestpunjabi()">best of punjab</option>
+                  <option class="font" value="area" onclick="bestrajasthani()">best of rajasthani</option>
+                  <option class="font" value="distance" onclick="bestharyanwi()">best of haryanwi</option>
+                </select>
+                </div>
+
+            <div class="cantainer border1"  id="back">
+                <div id="wellcome">
+                    <div id="container5">
+                        <h1>
+                            wellcome to Adore music
+                        </h1>
+                        <h2>
+                            choose your best song categories and enjoy
+                        </h2>
+                    </div>
+                </div>
+                <!-- wellcomeend -->
+                <div id="select">
+                    <div id="container4">
+                        <h1>
+                            Please select a category
+                        </h1>
+                    </div>
+                </div>
+                <!-- selectend -->
+                <div id="best-70s">
+                    <h1 id="70s">Best of 70's- no copy right Sound</h1>
+                    <div>
+                        <div class="songsname livesearch songitem">
+                            <img class="img1 imgs" src="images/first70/1.jpg" alt="1">
+                            <span class="songname mainname">let me love you</span>
+                            <span class="songlistplay">
+                                <span class="timestamp">05:34 </span>  <i id="0" class="fas songitemplay fa-play"></i>
+                            </span>
+                        </div>
+                        <div class="songsname livesearch songitem">
+                            <img class="img1 imgs" src="images/first70/1.jpg" alt="1">
+                            <span class="songname mainname">let me love you</span>
+                            <span class="songlistplay">
+                                <span class="timestamp">05:34 </span ><i id="1" class="fas songitemplay fa-play"></i>
+                            </span>
+                        </div>
+
+                        <div class="songsname livesearch songitem">
+                            <img class="img1 imgs" src="images/first70/1.jpg" alt="1">
+                            <span class="songname mainname">let me love you</span>
+                            <span class="songlistplay">
+                                <span class="timestamp">05:34 </span ><i id="2" class="fas songitemplay fa-play"></i>
+                            </span>
+                        </div>
+                        <div class="songsname livesearch songitem">
+                            <img class="img1 imgs" src="images/first70/1.jpg" alt="1">
+                            <span class="songname mainname">let me love you</span>
+                            <span class="songlistplay">
+                                <span class="timestamp">05:34 </span ><i id="3" class="fas songitemplay fa-play"></i>
+                            </span>
+                        </div>
+                        <div class="songsname livesearch songitem">
+                            <img class="img1 imgs" src="images/first70/1.jpg" alt="1">
+                            <span class="songname mainname">let me love you</span>
+                            <span class="songlistplay">
+                                <span class="timestamp">05:34 </span ><i id="4" class="fas songitemplay fa-play"></i>
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="songlist"></div>
+                    <div class="songbanner"></div>
+                </div>
+            
+                <!-- tempend -->
+                 <div id="best-90s">
+        <h1 id="90s">Best of 90's- no copy right Sound</h1>
+        <div>
+            <div class="songsname livesearch songitem2">
+        
+                <img class="img2 imgs" src="cover/1.jpg" alt="1">
+                <span class="songname2 mainname">let me love you</span>
+                <span class="songlistplay">
+                    <span class="timestamp2">05:34 </span>  <i id="0" class="fas songitemplay fa-play"></i>
+                </span>
+            </div>
+            <div class="songsname livesearch songitem2">
+                <img class="img2 imgs" src="cover/2.jpg" alt="1">
+                <span class="songname2 mainname">let me love you</span>
+                <span class="songlistplay">
+                    <span class="timestamp2">05:34 </span ><i id="1" class="fas songitemplay fa-play"></i>
+                </span>
+            </div>
+            <div class="songsname livesearch songitem2">
+                <img class="img2 imgs" src="cover/3.jpg" alt="1">
+                <span class="songname2 mainname">let me love you</span>
+                <span class="songlistplay">
+                    <span class="timestamp2">05:34 </span ><i id="2" class="fas songitemplay fa-play"></i>
+                </span>
+            </div>
+            <div class="songsname livesearch songitem2">
+                <img class="img2 imgs" src="cover/4.jpg" alt="1">
+                <span class="songname2 mainname">let me love you</span>
+                <span class="songlistplay">
+                    <span class="timestamp2">05:34 </span ><i id="3" class="fas songitemplay fa-play"></i>
+                </span>
+            </div>
+            <div class="songsname livesearch songitem2">
+                <img class="img2 imgs" src="cover/5.jpg" alt="1">
+                <span class="songname2 mainname">let me love you</span>
+                <span class="songlistplay">
+                    <span class="timestamp2">05:34 </span ><i id="4" class="fas songitemplay fa-play"></i>
+                </span>
+            </div>
+
+        </div>
+        <div class="songlist"></div>
+        <div class="songbanner"></div>
+    </div>
+    <!-- best-90send -->
+    <div id="best-punjabi">
+        <h1 id="punjabi">Best of punjabi- no copy right Sound</h1>
+        <div>
+            <div class="songsname livesearch songitem3">
+              
+                <img class="img3 imgs" src="cover/1.jpg" alt="1">
+                <span class="songname3 mainname">let me love you</span>
+                <span class="songlistplay">
+                    <span class="timestamp3">05:34 </span>  <i id="0" class="fas songitemplay fa-play"></i>
+                    <!-- <img src="./music/" alt=""> -->
+                </span>
+            </div>
+            <div class="songsname livesearch songitem3">
+                <img class="img3 imgs" src="cover/2.jpg" alt="1">
+                <span class="songname3 mainname">let me love you</span>
+                <span class="songlistplay">
+                    <span class="timestamp3">05:34 </span ><i id="1" class="fas songitemplay fa-play"></i>
+                </span>
+            </div>
+            <div class="songsname livesearch songitem3">
+                <img class="img3 imgs" src="cover/3.jpg" alt="1">
+                <span class="songname3 mainname">let me love you</span>
+                <span class="songlistplay">
+                    <span class="timestamp3">05:34 </span ><i id="2" class="fas songitemplay fa-play"></i>
+                </span>
+            </div>
+            <div class="songsname livesearch songitem3">
+                <img class="img3 imgs" src="cover/4.jpg" alt="1">
+                <span class="songname3 mainname">let me love you</span>
+                <span class="songlistplay">
+                    <span class="timestamp3">05:34 </span ><i id="3" class="fas songitemplay fa-play"></i>
+                </span>
+            </div>
+            <div class="songsname livesearch songitem3">
+                <img class="img3 imgs" src="cover/5.jpg" alt="1">
+                <span class="songname3 mainname">let me love you</span>
+                <span class="songlistplay">
+                    <span class="timestamp3">05:34 </span ><i id="4" class="fas songitemplay fa-play"></i>
+                </span>
+            </div>
+
+        
+        </div>
+        <div class="songlist"></div>
+        <div class="songbanner"></div>
+    </div> 
+    <!-- best-punjabiceend -->
+    <div id="best-rajasthani">
+        <h1 id="rajasthani">Best of rajasthani- no copy right Sound</h1>
+        <div>
+            <div class="songsname livesearch songitem4">
+        
+                <img class="img4 imgs" src="cover/1.jpg" alt="1">
+                <span class="songname4 mainname">let me love you</span>
+                <span class="songlistplay">
+                    <span class="timestamp4">05:34 </span>  <i id="0" class="fas songitemplay fa-play"></i>
+                </span>
+            </div>
+            <div class="songsname livesearch songitem4">
+        
+                <img class="img4 imgs" src="cover/1.jpg" alt="1">
+                <span class="songname4 mainname">let me love you</span>
+                <span class="songlistplay">
+                    <span class="timestamp4">05:34 </span>  <i id="1" class="fas songitemplay fa-play"></i>
+                </span>
+            </div>
+            <div class="songsname livesearch songitem4">
+                <img class="img4 imgs" src="cover/2.jpg" alt="1">
+                <span class="songname4 mainname">let me love you</span>
+                <span class="songlistplay">
+                    <span class="timestamp4">05:34 </span ><i id="2" class="fas songitemplay fa-play"></i>
+                </span>
+            </div>
+            <div class="songsname livesearch songitem4">
+                <img class="img4 imgs" src="cover/3.jpg" alt="1">
+                <span class="songname4 mainname">let me love you</span>
+                <span class="songlistplay">
+                    <span class="timestamp4">05:34 </span ><i id="3" class="fas songitemplay fa-play"></i>
+                </span>
+            </div>
+            <div class="songsname livesearch songitem4">
+                <img class="img4 imgs" src="cover/4.jpg" alt="1">
+                <span class="songname4 mainname">let me love you</span>
+                <span class="songlistplay">
+                    <span class="timestamp4">05:34 </span ><i id="4" class="fas songitemplay fa-play"></i>
+                </span>
+            </div>
+           
+        </div>
+        <div class="songlist"></div>
+        <div class="songbanner"></div>
+    </div> 
+    <!-- best-rajasthaniend -->
+    <div id="best-haryanwi">
+        <h1 id="haryanwi">Best of haryanwi- no copy right Sound</h1>
+        <div>
+            <div class="songsname livesearch songitem5">
+              
+                <img class="img5 imgs" src="cover/1.jpg" alt="1">
+                <span class="songname5 mainname">let me love you</span>
+                <span class="songlistplay">
+                    <span class="timestamp5">05:34 </span>  <i id="0" class="fas songitemplay fa-play"></i>
+                </span>
+            </div>
+            <div class="songsname livesearch songitem5">
+                <img class="img5 imgs" src="cover/2.jpg" alt="1">
+                <span class="songname5 mainname">let me love you</span>
+                <span class="songlistplay">
+                    <span class="timestamp5">05:34 </span ><i id="1" class="fas songitemplay fa-play"></i>
+                </span>
+            </div>
+            <div class="songsname livesearch songitem5">
+                <img class="img5 imgs" src="cover/3.jpg" alt="1">
+                <span class="songname5 mainname">let me love you</span>
+                <span class="songlistplay">
+                    <span class="timestamp5">05:34 </span ><i id="2" class="fas songitemplay fa-play"></i>
+                </span>
+            </div>
+            <div class="songsname livesearch songitem5">
+                <img class="img5 imgs" src="cover/4.jpg" alt="1">
+                <span class="songname5 mainname">let me love you</span>
+                <span class="songlistplay">
+                    <span class="timestamp5">05:34 </span ><i id="3" class="fas songitemplay fa-play"></i>
+                </span>
+            </div>
+             <div class="songsname livesearch songitem5">
+                <img class="img5 imgs" src="cover/5.jpg" alt="1">
+                <span class="songname5 mainname">let me love you</span>
+                <span class="songlistplay">
+                    <span class="timestamp5">05:34 </span ><i id="4" class="fas songitemplay fa-play"></i>
+                </span>
+            </div>
+
+            
+        </div>
+        <div class="songlist"></div>
+        <div class="songbanner"></div>
+    </div> 
+    <!-- best-haryanwiend -->
+            </div>
+<!-- cantainerend -->
+<div class="buttom">
+   
+    <div class="song-timer">
+        <span id="current-time">0:00</span>
+        <span id="max-duration">0:00</span>
+      </div>
+      
+    <input type="range" name="range" id="myprogressbar" onclick="getCurTime()" value="0" min="0" max="100">
+    <div class="icons">
+        <!-- fontaswesome -->
+        <i class="fas fa-angle-double-left" id="left"></i>
+         <i  class="fas fa-step-backward" id="previous"></i>
+         <i class="fas fa-play" id="masterplay"></i>
+         <i class="fas fa-step-forward" id="next"></i>
+         <i class="fas fa-angle-double-right" id="right"></i>
+    </div>
+    <div class="volume">
+        <i class="fas fa-volume-up" aria-hidden="true"  id="volume_icon"></i>
+        <input type="range" min="0" max="100" id="volume">  
+        <p id="volume_show" >100</p>
+     </div>
+    <div class="songinfo">
+        <img id="gif" src="images/playing.gif" alt="2"> <span class="mastersongname22" id="mastersongname"></span>
+    </div>
+</div>
+<!-- buttomend -->
+
+            <div class="footer border1">
+                <div class="footerbox1 ">
+                    <h1> <span class="adobefont">Adore Music</span> <span class="hide">presents you with every song you love: from this ocean of music </span> </h1>
+                    <img src="./logo/LOOgofooter.png" alt="logo" class="LOOgo2">
+                </div>
+                <div class="footerbox2 box22 ">
+                    <nav>
+                        <ul>
+                            <li><a href="#">About Adore</a></li>
+                            <li><a href="#">Contibutar</a></li>
+                            <li><a href="#">Our team</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">contact-me</a></li>
+                            <li class="social">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/mukesh.dhayal.14203" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://instagram.com/its_jattmd?utm_medium=copy_link" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://twitter.com/mukeshj11173710?t=u42G7nQBt5-jPY4ySVJbOQ&s=08" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/mukesh-jat-921433130" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </nav>
+                    <img src="./logo/LOOgofooter.png" alt="logo" class="LOOgo22">
+                </div>
+                <div class="footerbox3 box22 ">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Copyright policy</a></li>
+                            <li><a href="#">Developers</a></li>
+                            <li><a href="#">Sing in</a></li>
+                            <li><a href="./singup.html">Login</a></li>
+                            <li><a href="#">Term of use</a></li>
+                            <li><a href="#">over comunity</a></li>
+                            <!-- <li class="me"><a id="mee" href="#">All credit goes to </a> = <span class="me1"> <a href="#">&#128587 </a> </span></li> -->
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+                <div class="copyright">
+                    <p><i class="far fa-copyright"></i> jaipur india, All rights resevered </p>
+                </div>
+
+
+
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
