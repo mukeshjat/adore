@@ -142,9 +142,14 @@ border-radius: 7px;
 }
 .selector{
     display: block;
-    padding-top: 70px;
+    padding-top: 10px;
 }
-
+/* #padding{
+    margin-bottom: 100px;
+} */
+.bottommargin{
+    margin-top: 170px;
+}
 .sticky{
     position: fixed;
     top: 0;
@@ -385,7 +390,7 @@ display: none;
     }
   
     #myprogressbar{
-        width: 80vw;
+        width: 90%;
         cursor: pointer;
         position: relative;
         z-index: 1;
@@ -521,6 +526,16 @@ line-height: 3;
     }
 }
 @media (max-width: 950px){
+    .main2{
+        width: 100%;
+    }
+    .sticky{
+        position: fixed;
+        top: 0;
+        width: 99.7%;
+        margin-bottom: 700px;
+        z-index: 1;
+    }
     .adoreimg{
         width: 45%;
     }
@@ -653,7 +668,7 @@ line-height: 3;
 }
 .icons {
     font-size: 16px;
-    margin: 3% 0 11% -10%;
+    margin: 3% 0 4% -10%;
 }
 .mastersongname22{
     position: absolute;
@@ -793,5 +808,71 @@ top: 38%;
 margin-left: -12%;
 }
 }
-
-/* searchbar */
+@media (max-width: 350px){
+.selector {
+    padding-top: 10px;
+    text-align: end;
+    width: 141%;
+    margin-left: -51%;
+  }
+  .li1{
+      font-size: 9px;
+  }
+  /* .buttom {
+    height: 141px;
+  } */
+  .song-timer {
+    width: 85%;
+    margin-top: 4%;
+  }
+  #myprogressbar {
+    width: 87%;
+  }
+  .icons {
+    font-size: 20px;
+    width: 62%;
+    margin: 10% 0 10% 0%;
+  }
+  .volume {
+    width: 221%;
+    margin-top: 107px;
+    justify-content: end;
+    font-size: 16px;
+  }
+  .songinfo {
+    width: 66%;
+    margin-left: 10px;
+    margin-top: -9%;
+    position: absolute;
+    left: 10vw;
+    color: white;
+    z-index: 0;
+    top: 38%;
+  }
+  .songinfo img {
+    width: 21%;
+    margin-right: 9px;
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+    margin-left: -24px;
+    margin-top: 30px;
+  }
+  .mastersongname22 {
+    position: static;
+    font-size: 14px;
+  }
+  .mainname:hover {
+    transform: scale(1);
+    text-decoration: underline;
+    color: #3b8eba;
+  }
+  .songlistplay{
+      display: flex;
+  }
+  .timestamp {
+    margin: 0 7px;
+  }
+  .songitemplay {
+    margin-right: 17px;
+  }
+}

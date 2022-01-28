@@ -4,14 +4,16 @@ console.log("welcome to adore");
 // searchbr
 window.addEventListener('scroll', function(){
     let navbar = document.getElementById("stikymenu");
-
+    let padind = document.getElementById("padding")
 
     if(window.pageYOffset >= 112.6){
         navbar.classList.add('sticky');
+        padind.classList.add('bottommargin');
+        document.getElementById("padding").style.marginTop = 70;
 
     } else{
         navbar.classList.remove('sticky');
-        
+        padind.classList.remove('bottommargin');
     }
     // console.log(window);
 });
