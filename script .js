@@ -47,76 +47,17 @@ function showResult(str) {
 let w = document.getElementById("wellcome");
 let dropDoenValue=0;
 
-function best70s(){
-  dropDoenValue=1;
-  let x =   document.getElementById("best-70s").style.display = "block";
-  let y =  document.getElementById("best-90s").style.display = "none";
-  let z =  document.getElementById("best-punjabi").style.display = "none";
-  let s = document.getElementById("select").style.display = "none";
-  let w = document.getElementById("wellcome").style.display = "none";
-  let r = document.getElementById("best-rajasthani").style.display = "none";
-  let b = document.getElementById("best-haryanwi").style.display = "none";
-  document.getElementById('back').style.backgroundImage = "url(./images/best70sjpg.jpg)" ;
-  document.getElementById('70s').style.color = "white";
-}
-function best90s(){
-  dropDoenValue=2;
+function changeLang(newlang){
 
-    let y =  document.getElementById("best-90s").style.display = "block";
-    let x =   document.getElementById("best-70s").style.display = "none";
-    let z =  document.getElementById("best-punjabi").style.display = "none";
-    let s = document.getElementById("select").style.display = "none";
-    let w = document.getElementById("wellcome").style.display = "none";
-    let r = document.getElementById("best-rajasthani").style.display = "none";
-    let b = document.getElementById("best-haryanwi").style.display = "none";
-    document.getElementById('back').style.backgroundImage = "url(./images/best90s.jpg)" ;
-  document.getElementById("90s").style.color = "white";
-}
-function bestpunjabi(){
-  dropDoenValue=3;
+    console.log("My Function is Running...");
+    console.log(newlang.value);
 
-  let z =  document.getElementById("best-punjabi").style.display = "block";
-  let x =   document.getElementById("best-70s").style.display = "none";
-  let y =  document.getElementById("best-90s").style.display = "none";
-  let s = document.getElementById("select").style.display = "none";
-  let w = document.getElementById("wellcome").style.display = "none";
-  let r = document.getElementById("best-rajasthani").style.display = "none";
-  let b = document.getElementById("best-haryanwi").style.display = "none";
-  document.getElementById('back').style.backgroundImage = "url(./images/bestpunjabi.jpg)" ;
-}
-function bestrajasthani(){
-    dropDoenValue=4;
-    let r = document.getElementById("best-rajasthani").style.display = "block";
-    let z =  document.getElementById("best-punjabi").style.display = "none";
-    let x =   document.getElementById("best-70s").style.display = "none";
-    let y =  document.getElementById("best-90s").style.display = "none";
-    let s = document.getElementById("select").style.display = "none";
-    let w = document.getElementById("wellcome").style.display = "none";
-    let b = document.getElementById("best-haryanwi").style.display = "none";
-  document.getElementById('back').style.backgroundImage = "url(./images/bestrajssthani.jpg)" ;
-    document.getElementById("rajasthani").style.color = "white";
+    dropDoenValue=newlang.value;
+    for (let el of document.querySelectorAll('.new-lang')) el.style.display = 'none';
+    document.getElementsByClassName(newlang.value)[0].style.display = "block";
+
   }
-  function bestharyanwi(){
-    dropDoenValue=5;
-      let b = document.getElementById("best-haryanwi").style.display = "block";
-    let z =  document.getElementById("best-punjabi").style.display = "none";
-    let x =   document.getElementById("best-70s").style.display = "none";
-    let y =  document.getElementById("best-90s").style.display = "none";
-    let s = document.getElementById("select").style.display = "none";
-    let w = document.getElementById("wellcome").style.display = "none";
-    let r = document.getElementById("best-rajasthani").style.display = "none";
-  document.getElementById('back').style.backgroundImage = "url(./images/bestharyanwi.jpg)" ;
-  }
-function select(){
-   let s = document.getElementById("select").style.display = "block";
-    let x =   document.getElementById("best-70s").style.display = "none";
-    let y =  document.getElementById("best-90s").style.display = "none";
-  let z =  document.getElementById("best-punjabi").style.display = "none";
-  let w = document.getElementById("wellcome").style.display = "none";
-  let r = document.getElementById("best-rajasthani").style.display = "none";
-  mastersongname = "";
-  let b = document.getElementById("best-haryanwi").style.display = "none";
-}
+
 
 let songIndex = 0;
 let audioElement = new Audio('music/first70/1.mp3')
@@ -209,6 +150,7 @@ songitems5.forEach((element, i)=>{
 
 document.getElementById("masterplay").addEventListener('click', function(){
     var onmiddlevolume = audioElement.currentTime;
+    audioElement.play();sss
     if(audioElement.paused || onmiddlevolume<=0){
         audioElement.play();
         //  audioElement.currentTime = mainvalume;
@@ -223,39 +165,35 @@ document.getElementById("masterplay").addEventListener('click', function(){
             document.getElementById('max-duration').innerText = songs[songIndex].timepath;
             // document.getElementById("back").style.backgroundImage = `url('images/first70/${songIndex +1}.jpg')`;
             audioElement.src = `music/first70/${songIndex +1}.mp3`;
-        if(mastersongname.innerText == songs[songIndex].songname){
-            dropDoenValue = 1
-            best70s();
-        }
-        if(dropDoenValue == 1){
+        if(dropDoenValue == "best70s"){
             document.getElementById("back").style.backgroundImage = `url('images/first70/${songIndex +1}.jpg')`;
             mastersongname.innerText= songs[songIndex].songname;
             audioElement.src = `music/first70/${songIndex +1}.mp3`;
             document.getElementById('max-duration').innerText = songs[songIndex].timepath;
             
             } 
-            if(dropDoenValue == 2){
+            if(dropDoenValue == "best90s"){
             document.getElementById("back").style.backgroundImage = `url('images/best90s/${songIndex +1}.jpg')`;
             mastersongname.innerText= songs2[songIndex].songname2;
             audioElement.src = `music/best90s/${songIndex +1}.mp3`;
             document.getElementById('max-duration').innerText = songs2[songIndex].timepath2;
     
             }
-            if(dropDoenValue == 3){
+            if(dropDoenValue == "bestpunjabi"){
             document.getElementById("back").style.backgroundImage = `url('images/punjabi/${songIndex +1}.jpg')`;
             mastersongname.innerText= songs3[songIndex].songname3;
             audioElement.src = `music/punjabi/${songIndex +1}.mp3`;
             document.getElementById('max-duration').innerText = songs3[songIndex].timepath3;
     
             }
-            if(dropDoenValue == 4){
+            if(dropDoenValue == "bestrajasthani"){
             document.getElementById("back").style.backgroundImage = `url('images/rajasthani/${songIndex +1}.jpg')`;
             mastersongname.innerText= songs4[songIndex].songname4;
             audioElement.src = `music/rajasthani/${songIndex +1}.mp3`;
             document.getElementById('max-duration').innerText = songs4[songIndex].timepath4;
     
             }
-            if(dropDoenValue == 5){
+            if(dropDoenValue == "bestharyanwi"){
             document.getElementById("back").style.backgroundImage = `url('images/haryanvi/${songIndex +1}.jpg')`;
             document.getElementById('max-duration').innerText = songs5[songIndex].timepath5;
             audioElement.src = `music/haryanvi/${songIndex +1}.mp3`;
@@ -322,35 +260,35 @@ Array.from(document.getElementsByClassName('songitemplay')).forEach((element)=>{
         e.target.classList.add('fa-pause');
         document.getElementById("back").style.backgroundImage = `url('images/first70/${songIndex +1}.jpg')`;
         debugger
-        if(dropDoenValue == 1){
+        if(dropDoenValue == "best70s"){
         document.getElementById("back").style.backgroundImage = `url('images/first70/${songIndex +1}.jpg')`;
         mastersongname.innerText= songs[songIndex].songname;
         audioElement.src = `music/first70/${songIndex +1}.mp3`;
         document.getElementById('max-duration').innerText = songs[songIndex].timepath;
         
         } 
-        if(dropDoenValue == 2){
+        if(dropDoenValue == "best90s"){
         document.getElementById("back").style.backgroundImage = `url('images/best90s/${songIndex +1}.jpg')`;
         mastersongname.innerText= songs2[songIndex].songname2;
         audioElement.src = `music/best90s/${songIndex +1}.mp3`;
         document.getElementById('max-duration').innerText = songs2[songIndex].timepath2;
 
         }
-        if(dropDoenValue == 3){
+        if(dropDoenValue == "bestpunjabi"){
         document.getElementById("back").style.backgroundImage = `url('images/punjabi/${songIndex +1}.jpg')`;
         mastersongname.innerText= songs3[songIndex].songname3;
         audioElement.src = `music/punjabi/${songIndex +1}.mp3`;
         document.getElementById('max-duration').innerText = songs3[songIndex].timepath3;
 
         }
-        if(dropDoenValue == 4){
+        if(dropDoenValue == "bestrajasthani"){
         document.getElementById("back").style.backgroundImage = `url('images/rajasthani/${songIndex +1}.jpg')`;
         mastersongname.innerText= songs4[songIndex].songname4;
         audioElement.src = `music/rajasthani/${songIndex +1}.mp3`;
         document.getElementById('max-duration').innerText = songs4[songIndex].timepath4;
 
         }
-        if(dropDoenValue == 5){
+        if(dropDoenValue == "bestharyanwi"){
         document.getElementById("back").style.backgroundImage = `url('images/haryanvi/${songIndex +1}.jpg')`;
         document.getElementById('max-duration').innerText = songs5[songIndex].timepath5;
         audioElement.src = `music/haryanvi/${songIndex +1}.mp3`;
@@ -381,7 +319,7 @@ document.getElementById("next").addEventListener('click', ()=>{
         songIndex += 1;
     }
 
-    if(dropDoenValue == 1){0
+    if(dropDoenValue == "best70s"){0
         audioElement.src = `music/first70/${songIndex + 1}.mp3`;
         document.getElementById("back").style.backgroundImage = `url('images/first70/${songIndex +1}.jpg')`;
                 mastersongname.innerText= songs[songIndex].songname;
@@ -390,26 +328,26 @@ document.getElementById("next").addEventListener('click', ()=>{
 
 
         } 
-        if(dropDoenValue == 2){
+        if(dropDoenValue == "best90s"){
             document.getElementById("back").style.backgroundImage = `url('images/best90s/${songIndex +1}.jpg')`;
             mastersongname.innerText= songs2[songIndex].songname2;
             audioElement.src = `music/best90s/${songIndex +1}.mp3`;
             document.getElementById('max-duration').innerText = songs2[songIndex].timepath2;
      
         }
-        if(dropDoenValue == 3){
+        if(dropDoenValue == "bestpunjabi"){
             document.getElementById("back").style.backgroundImage = `url('images/punjabi/${songIndex +1}.jpg')`;
             mastersongname.innerText= songs3[songIndex].songname3;
             audioElement.src = `music/punjabi/${songIndex +1}.mp3`;
             document.getElementById('max-duration').innerText = songs3[songIndex].timepath3;
         }
-        if(dropDoenValue == 4){
+        if(dropDoenValue == "bestrajasthani"){
             document.getElementById("back").style.backgroundImage = `url('images/rajasthani/${songIndex +1}.jpg')`;
             mastersongname.innerText= songs4[songIndex].songname4;
             audioElement.src = `music/rajasthani/${songIndex +1}.mp3`;
             document.getElementById('max-duration').innerText = songs4[songIndex].timepath4;
         }
-        if(dropDoenValue == 5){
+        if(dropDoenValue == "bestharyanwi"){
             document.getElementById("back").style.backgroundImage = `url('images/haryanvi/${songIndex +1}.jpg')`;
             document.getElementById('max-duration').innerText = songs5[songIndex].timepath5;
             audioElement.src = `music/haryanvi/${songIndex +1}.mp3`;
@@ -425,7 +363,7 @@ document.getElementById("previous").addEventListener('click', ()=>{
         songIndex -= 1;
     }
     
-    if(dropDoenValue == 1){0
+    if(dropDoenValue == "best70s"){0
         audioElement.src = `music/first70/${songIndex + 1}.mp3`;
         document.getElementById("back").style.backgroundImage = `url('images/first70/${songIndex +1}.jpg')`;
                 mastersongname.innerText= songs[songIndex].songname;
@@ -433,25 +371,25 @@ document.getElementById("previous").addEventListener('click', ()=>{
 
 
         } 
-        if(dropDoenValue == 2){
+        if(dropDoenValue == "best90s"){
             document.getElementById("back").style.backgroundImage = `url('images/best90s/${songIndex +1}.jpg')`;
             mastersongname.innerText= songs2[songIndex].songname2;
             audioElement.src = `music/best90s/${songIndex +1}.mp3`;
             document.getElementById('max-duration').innerText = songs2[songIndex].timepath2;
         }
-        if(dropDoenValue == 3){
+        if(dropDoenValue == "bestpunjabi"){
             document.getElementById("back").style.backgroundImage = `url('images/punjabi/${songIndex +1}.jpg')`;
             mastersongname.innerText= songs3[songIndex].songname3;
             audioElement.src = `music/punjabi/${songIndex +1}.mp3`;
             document.getElementById('max-duration').innerText = songs3[songIndex].timepath3;
         }
-        if(dropDoenValue == 4){
+        if(dropDoenValue == "bestrajasthani"){
             document.getElementById("back").style.backgroundImage = `url('images/rajasthani/${songIndex +1}.jpg')`;
             mastersongname.innerText= songs4[songIndex].songname4;
             audioElement.src = `music/rajasthani/${songIndex +1}.mp3`;
             document.getElementById('max-duration').innerText = songs4[songIndex].timepath4;
         }
-        if(dropDoenValue == 5){
+        if(dropDoenValue == "bestharyanwi"){
             document.getElementById("back").style.backgroundImage = `url('images/haryanvi/${songIndex +1}.jpg')`;
             document.getElementById('max-duration').innerText = songs5[songIndex].timepath5;
             audioElement.src = `music/haryanvi/${songIndex +1}.mp3`;

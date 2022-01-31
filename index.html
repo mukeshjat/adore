@@ -7,6 +7,19 @@
     <title>Adore-All your  favourite  is Here</title>
     <script src="https://kit.fontawesome.com/faa0509cbe.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Poppins&family=Source+Sans+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
+
+<link rel="apple-touch-icon" sizes="180x180" href="./favicon_package_v0.16/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon_package_v0.16/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon_package_v0.16/favicon-16x16.png">
+<link rel="manifest" href="./favicon_package_v0.16/site.webmanifest">
+<link rel="mask-icon" href="./favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
 </head>
 <body>
     <div class="main">
@@ -41,7 +54,7 @@
                     <div class="account">
                         <ul>
                             <li><a href="#">sing in</a></li>
-                            <li><a class="li1" href="./singup.html" target="_blank">Login for free</a></li>
+                            <li><a class="li1" href="./singup.html" target="_blank">Login</a></li>
                         </ul>
                     </div>
                 </div>
@@ -50,37 +63,35 @@
             <div class="selector" id="padding">
             <form action="/action_page.php">
                 <label for="categries" id="choose">Choose your best category</label>
-                <select name="categries" id="categries">
-                  <option class="font" value="select" onclick="select()">select</option>
-                  <option class="font" value="temp" onclick="best70s()">best of 70's</option>
-                  <option class="font" value="area" onclick="best90s()">best of 90's</option>
-                  <option class="font" value="distance" onclick="bestpunjabi()">best of punjab</option>
-                  <option class="font" value="area" onclick="bestrajasthani()">best of rajasthani</option>
-                  <option class="font" value="distance" onclick="bestharyanwi()">best of haryanwi</option>
+                <select name="categries" id="categries" onchange="changeLang(this)">
+                    <option class="font" value="wellcome">Select</option>
+                  <option class="font" value="best70s" >best of 70's</option>
+                  <option class="font" value="best90s" >best of 90's</option>
+                  <option class="font" value="bestpunjabi">best of punjab</option>
+                  <option class="font" value="bestrajasthani" >best of rajasthani</option>
+                  <option class="font" value="bestharyanwi">best of haryanwi</option>
                 </select>
                 </div>
 
             <div class="cantainer border1"  id="back">
-                <div id="wellcome">
-                    <div id="container5">
+                <div id="wellcome" class="new-lang wellcome">
                         <h1>
                             wellcome to Adore music
                         </h1>
                         <h2>
                             choose your best song categories and enjoy
                         </h2>
-                    </div>
                 </div>
                 <!-- wellcomeend -->
-                <div id="select">
+                <!-- <div id="select">
                     <div id="container4">
                         <h1>
                             Please select a category
                         </h1>
                     </div>
-                </div>
+                </div> -->
                 <!-- selectend -->
-                <div id="best-70s">
+                <div id="best-70s" class="new-lang best70s">
                     <h1 id="70s">Best of 70's- no copy right Sound</h1>
                     <div>
                         <div class="songsname livesearch songitem">
@@ -126,40 +137,40 @@
                 </div>
             
                 <!-- tempend -->
-                 <div id="best-90s">
+                 <div id="best-90s" class="new-lang best90s">
         <h1 id="90s">Best of 90's- no copy right Sound</h1>
         <div>
             <div class="songsname livesearch songitem2">
         
-                <img class="img2 imgs" src="cover/1.jpg" alt="1">
+                <img class="img2 imgs" src="images/best90s/1.jpg" alt="1">
                 <span class="songname2 mainname">let me love you</span>
                 <span class="songlistplay">
                     <span class="timestamp2">05:34 </span>  <i id="0" class="fas songitemplay fa-play"></i>
                 </span>
             </div>
             <div class="songsname livesearch songitem2">
-                <img class="img2 imgs" src="cover/2.jpg" alt="1">
+                <img class="img2 imgs" src="images/best90s/1.jpg" alt="1">
                 <span class="songname2 mainname">let me love you</span>
                 <span class="songlistplay">
                     <span class="timestamp2">05:34 </span ><i id="1" class="fas songitemplay fa-play"></i>
                 </span>
             </div>
             <div class="songsname livesearch songitem2">
-                <img class="img2 imgs" src="cover/3.jpg" alt="1">
+                <img class="img2 imgs" src="images/best90s/1.jpg" alt="1">
                 <span class="songname2 mainname">let me love you</span>
                 <span class="songlistplay">
                     <span class="timestamp2">05:34 </span ><i id="2" class="fas songitemplay fa-play"></i>
                 </span>
             </div>
             <div class="songsname livesearch songitem2">
-                <img class="img2 imgs" src="cover/4.jpg" alt="1">
+                <img class="img2 imgs" src="images/best90s/1.jpg" alt="1">
                 <span class="songname2 mainname">let me love you</span>
                 <span class="songlistplay">
                     <span class="timestamp2">05:34 </span ><i id="3" class="fas songitemplay fa-play"></i>
                 </span>
             </div>
             <div class="songsname livesearch songitem2">
-                <img class="img2 imgs" src="cover/5.jpg" alt="1">
+                <img class="img2 imgs" src="images/best90s/1.jpg" alt="1">
                 <span class="songname2 mainname">let me love you</span>
                 <span class="songlistplay">
                     <span class="timestamp2">05:34 </span ><i id="4" class="fas songitemplay fa-play"></i>
@@ -171,12 +182,12 @@
         <div class="songbanner"></div>
     </div>
     <!-- best-90send -->
-    <div id="best-punjabi">
+    <div id="best-punjabi" class="new-lang bestpunjabi">
         <h1 id="punjabi">Best of punjabi- no copy right Sound</h1>
         <div>
             <div class="songsname livesearch songitem3">
               
-                <img class="img3 imgs" src="cover/1.jpg" alt="1">
+                <img class="img3 imgs" src="images/best90s/1.jpg" alt="1">
                 <span class="songname3 mainname">let me love you</span>
                 <span class="songlistplay">
                     <span class="timestamp3">05:34 </span>  <i id="0" class="fas songitemplay fa-play"></i>
@@ -184,28 +195,28 @@
                 </span>
             </div>
             <div class="songsname livesearch songitem3">
-                <img class="img3 imgs" src="cover/2.jpg" alt="1">
+                <img class="img3 imgs" src="images/best90s/1.jpg" alt="1">
                 <span class="songname3 mainname">let me love you</span>
                 <span class="songlistplay">
                     <span class="timestamp3">05:34 </span ><i id="1" class="fas songitemplay fa-play"></i>
                 </span>
             </div>
             <div class="songsname livesearch songitem3">
-                <img class="img3 imgs" src="cover/3.jpg" alt="1">
+                <img class="img3 imgs" src="images/best90s/1.jpg" alt="1">
                 <span class="songname3 mainname">let me love you</span>
                 <span class="songlistplay">
                     <span class="timestamp3">05:34 </span ><i id="2" class="fas songitemplay fa-play"></i>
                 </span>
             </div>
             <div class="songsname livesearch songitem3">
-                <img class="img3 imgs" src="cover/4.jpg" alt="1">
+                <img class="img3 imgs" src="images/best90s/1.jpg" alt="1">
                 <span class="songname3 mainname">let me love you</span>
                 <span class="songlistplay">
                     <span class="timestamp3">05:34 </span ><i id="3" class="fas songitemplay fa-play"></i>
                 </span>
             </div>
             <div class="songsname livesearch songitem3">
-                <img class="img3 imgs" src="cover/5.jpg" alt="1">
+                <img class="img3 imgs" src="images/best90s/1.jpg" alt="1">
                 <span class="songname3 mainname">let me love you</span>
                 <span class="songlistplay">
                     <span class="timestamp3">05:34 </span ><i id="4" class="fas songitemplay fa-play"></i>
@@ -218,12 +229,12 @@
         <div class="songbanner"></div>
     </div> 
     <!-- best-punjabiceend -->
-    <div id="best-rajasthani">
+    <div id="best-rajasthani" class="new-lang bestrajasthani">
         <h1 id="rajasthani">Best of rajasthani- no copy right Sound</h1>
         <div>
             <div class="songsname livesearch songitem4">
         
-                <img class="img4 imgs" src="cover/1.jpg" alt="1">
+                <img class="img4 imgs" src="images/best90s/1.jpg" alt="1">
                 <span class="songname4 mainname">let me love you</span>
                 <span class="songlistplay">
                     <span class="timestamp4">05:34 </span>  <i id="0" class="fas songitemplay fa-play"></i>
@@ -231,28 +242,28 @@
             </div>
             <div class="songsname livesearch songitem4">
         
-                <img class="img4 imgs" src="cover/1.jpg" alt="1">
+                <img class="img4 imgs" src="images/best90s/1.jpg" alt="1">
                 <span class="songname4 mainname">let me love you</span>
                 <span class="songlistplay">
                     <span class="timestamp4">05:34 </span>  <i id="1" class="fas songitemplay fa-play"></i>
                 </span>
             </div>
             <div class="songsname livesearch songitem4">
-                <img class="img4 imgs" src="cover/2.jpg" alt="1">
+                <img class="img4 imgs" src="images/best90s/1.jpg" alt="1">
                 <span class="songname4 mainname">let me love you</span>
                 <span class="songlistplay">
                     <span class="timestamp4">05:34 </span ><i id="2" class="fas songitemplay fa-play"></i>
                 </span>
             </div>
             <div class="songsname livesearch songitem4">
-                <img class="img4 imgs" src="cover/3.jpg" alt="1">
+                <img class="img4 imgs" src="images/best90s/1.jpg" alt="1">
                 <span class="songname4 mainname">let me love you</span>
                 <span class="songlistplay">
                     <span class="timestamp4">05:34 </span ><i id="3" class="fas songitemplay fa-play"></i>
                 </span>
             </div>
             <div class="songsname livesearch songitem4">
-                <img class="img4 imgs" src="cover/4.jpg" alt="1">
+                <img class="img4 imgs" src="images/best90s/1.jpg" alt="1">
                 <span class="songname4 mainname">let me love you</span>
                 <span class="songlistplay">
                     <span class="timestamp4">05:34 </span ><i id="4" class="fas songitemplay fa-play"></i>
@@ -264,40 +275,40 @@
         <div class="songbanner"></div>
     </div> 
     <!-- best-rajasthaniend -->
-    <div id="best-haryanwi">
+    <div id="best-haryanwi" class="new-lang bestharyanwi">
         <h1 id="haryanwi">Best of haryanwi- no copy right Sound</h1>
         <div>
             <div class="songsname livesearch songitem5">
               
-                <img class="img5 imgs" src="cover/1.jpg" alt="1">
+                <img class="img5 imgs" src="images/best90s/1.jpg" alt="1">
                 <span class="songname5 mainname">let me love you</span>
                 <span class="songlistplay">
                     <span class="timestamp5">05:34 </span>  <i id="0" class="fas songitemplay fa-play"></i>
                 </span>
             </div>
             <div class="songsname livesearch songitem5">
-                <img class="img5 imgs" src="cover/2.jpg" alt="1">
+                <img class="img5 imgs" src="images/best90s/1.jpg" alt="1">
                 <span class="songname5 mainname">let me love you</span>
                 <span class="songlistplay">
                     <span class="timestamp5">05:34 </span ><i id="1" class="fas songitemplay fa-play"></i>
                 </span>
             </div>
             <div class="songsname livesearch songitem5">
-                <img class="img5 imgs" src="cover/3.jpg" alt="1">
+                <img class="img5 imgs" src="images/best90s/1.jpg" alt="1">
                 <span class="songname5 mainname">let me love you</span>
                 <span class="songlistplay">
                     <span class="timestamp5">05:34 </span ><i id="2" class="fas songitemplay fa-play"></i>
                 </span>
             </div>
             <div class="songsname livesearch songitem5">
-                <img class="img5 imgs" src="cover/4.jpg" alt="1">
+                <img class="img5 imgs" src="images/best90s/1.jpg" alt="1">
                 <span class="songname5 mainname">let me love you</span>
                 <span class="songlistplay">
                     <span class="timestamp5">05:34 </span ><i id="3" class="fas songitemplay fa-play"></i>
                 </span>
             </div>
              <div class="songsname livesearch songitem5">
-                <img class="img5 imgs" src="cover/5.jpg" alt="1">
+                <img class="img5 imgs" src="images/best90s/1.jpg" alt="1">
                 <span class="songname5 mainname">let me love you</span>
                 <span class="songlistplay">
                     <span class="timestamp5">05:34 </span ><i id="4" class="fas songitemplay fa-play"></i>
@@ -389,6 +400,6 @@
 
         </div>
     </div>
-    <script src="./script.js"></script>
+    <script src="./script .js"></script>
 </body>
 </html>
