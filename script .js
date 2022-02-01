@@ -51,14 +51,13 @@ function changeLang(newlang){
 
     console.log("My Function is Running...");
     console.log(newlang.value);
-
     dropDoenValue=newlang.value;
     for (let el of document.querySelectorAll('.new-lang')) el.style.display = 'none';
     document.getElementsByClassName(newlang.value)[0].style.display = "block";
-
+    // document.getElementsByClassName(newlang.value)[0].style.backgroundImage = `url('images/${newlang.value[0]}/${songIndex}.jpg')`;
+    document.getElementById("back").style.backgroundImage = `url('./${newlang.value[0]}/${newlang.value}.jpg')`;
+    console.log(newlang.value[0]);
   }
-
-
 let songIndex = 0;
 let audioElement = new Audio('music/first70/1.mp3')
 let masterplays = document.getElementsByClassName('masterplay');
@@ -150,13 +149,10 @@ songitems5.forEach((element, i)=>{
 
 document.getElementById("masterplay").addEventListener('click', function(){
     var onmiddlevolume = audioElement.currentTime;
-    audioElement.play();sss
-    if(audioElement.paused || onmiddlevolume<=0){
+    if(audioElement.paused || audioElement.currentTime<0){
+        // audioElement.currentTime();
         audioElement.play();
         //  audioElement.currentTime = mainvalume;
-        // audioElement.currentTime = mainvolume;
-
-
         console.log(audioElement.currentTime);
         document.getElementById("masterplay").classList.remove('fa-play');
         document.getElementById("masterplay").classList.add('fa-pause');
@@ -170,7 +166,7 @@ document.getElementById("masterplay").addEventListener('click', function(){
             mastersongname.innerText= songs[songIndex].songname;
             audioElement.src = `music/first70/${songIndex +1}.mp3`;
             document.getElementById('max-duration').innerText = songs[songIndex].timepath;
-            
+    document.getElementsByClassName(newlang.value)[0].style.backgroundImage = "none";
             } 
             if(dropDoenValue == "best90s"){
             document.getElementById("back").style.backgroundImage = `url('images/best90s/${songIndex +1}.jpg')`;
@@ -204,6 +200,7 @@ document.getElementById("masterplay").addEventListener('click', function(){
         
     } else{
         audioElement.pause();
+        // audioElement.currentTime();
         // onmiddlevolume();
         console.log(onmiddlevolume);
         document.getElementById("masterplay").classList.remove('fa-pause');
@@ -302,6 +299,7 @@ Array.from(document.getElementsByClassName('songitemplay')).forEach((element)=>{
         }
         else{
             audioElement.pause();
+             console.log(audioElement.pause());
             e.target.classList.remove('fa-pause');
         e.target.classList.add('fa-play');
         document.getElementById("masterplay").classList.remove('fa-pause');
@@ -363,7 +361,7 @@ document.getElementById("previous").addEventListener('click', ()=>{
         songIndex -= 1;
     }
     
-    if(dropDoenValue == "best70s"){0
+    if(dropDoenValue == "best70s"){
         audioElement.src = `music/first70/${songIndex + 1}.mp3`;
         document.getElementById("back").style.backgroundImage = `url('images/first70/${songIndex +1}.jpg')`;
                 mastersongname.innerText= songs[songIndex].songname;
@@ -451,11 +449,14 @@ mute_sound.addEventListener('click', ()=>{
 //     document.getElementById('volume_icon').classList.add('fa-volume-up');
 //     document.getElementById('volume_icon').classList.remove('fa-volume-down');
 // }
- else if(current_valume == 0){
+ else{
     audioElement.volume = 20;
     volume_show.innerHTML = 20;
+    current_valume = 20;
     console.log(current_valume);
     console.log(volume.value);
+    document.getElementById('volume_icon').classList.remove('fa-volume-down');
+    document.getElementById('volume_icon').classList.add('fa-volume-up');
 }
   });
 

@@ -230,30 +230,30 @@ label {
 }
 #best-70s {
   display: none;
-  background-image: url(./images/best70sjpg.jpg);
+  /* background-image: url(./images/best70sjpg.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
 }
 #best-90s {
-  background-image: url(./images/best90s.jpg);
+  /* background-image: url(./images/best90s.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
   display: none;
 }
 #best-punjabi {
-  background-image: url(./images/bestpunjabi.jpg);
+  /* background-image: url(./images/bestpunjabi.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
   display: none;
 }
 #best-haryanwi {
-  background-image: url(./images/bestharyanwi.jpg);
+  /* background-image: url(./images/bestharyanwi.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
   display: none;
 }
 #best-rajasthani {
-  background-image: url(./images/bestrajssthani.jpg);
+  /* background-image: url(./images/bestrajssthani.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
   display: none;
@@ -418,10 +418,10 @@ label {
 }
 
 #myprogressbar {
-  width: 80vw;
+  width: 90%;
   cursor: pointer;
   position: relative;
-  z-index: 1;
+  z-index: 1
 }
 .icons {
   color: white;
